@@ -1,6 +1,4 @@
 package com.example.road_control_system.models;
-
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -9,20 +7,17 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Table(name = "routes")
+@Table(name = "vehicle")
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Route {
+public class Vehicle {
     @Id @GeneratedValue
     private int id;
-    private String route;
-    private String name;
     private String type;
-    private Double length;
-    private Double weight_max;
-    private Double speed_max;
-
-
+    private String licenseplate;
+    private Double weight;
+    private String model;
 }
+
